@@ -1,13 +1,215 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/RobotoCondensed-Regular.ttf");
+}
+*{
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  font-family: Roboto;
+}
+body{
+  /* background-color: #131313; */
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,105,1) 50%, rgba(8,130,106,1) 70%, rgba(0,255,128,1) 100%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* /////////////////////////////////////////////////////////////////////////// */
+/* HEADER */
+/* /////////////////////////////////////////////////////////////////////////// */
+
+header{
+  z-index: 2;
+  position: sticky;
+  top: 0px;
+  margin-bottom: 16px;
+}
+.navContainerHeader{
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,105,1) 50%, rgba(8,130,106,1) 70%, rgba(0,255,128,1) 100%);
+}
+.navContainerHeader ul{
+  margin-top: 16px;
+  padding-right: 32%;
+}
+.navContainerHeader li{
+  display: inline;
+  padding: 0px 16px;
+}
+.navContainerHeader li a{
+  color: #F4E8C1;
+  
+}
+.navContainerHeader span{
+  color: #F4E8C1;
+}
+
+.divNavHeader{
+  display: flex;
+  justify-content: flex-end;
+}
+.divNavHeader input{
+  margin: auto 16px;
+  color: #131313;
+}
+.divNavHeader input ::placeholder{
+  color: #131313;
+}
+.divNavHeader img{
+  width: 20%;
+  border-radius: 50%;
+}
+div .logoContainer{
+  width: 12%;
+  margin-right: 48px;
+}
+.logoContainer img{
+  width: 100%;
+  padding-left: 16px;
+}
+.navContainerHeader{
+  padding: 16px 0px;
+  display: flex;
+}
+div.profilPicture{
+  border-radius: 50%;
+  background-image: url("./assets/images/Gland.png");
+  background-size: cover;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+
+}
+/* /////////////////////////////////////////////////////////////////////////// */
+/* FOOTER */
+/* /////////////////////////////////////////////////////////////////////////// */
+
+footer{
+  background: rgb(2,0,36);
+  background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(9,121,105,1) 50%, rgba(8,130,106,1) 70%, rgba(0,255,128,1) 100%);
+  text-align: center;
+  background-color: #00FF80;
+  padding: 16px;
+  margin-top: 128px;
+}
+footer span{
+  color: #F4E8C1;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+/* MAIN */
+/* /////////////////////////////////////////////////////////////////////////// */
+
+.articleContainerMain{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #F4E8C1;
+  text-align: center;
+}
+.articleContainerMain article{
+  width: 20vw;
+  height: 60vh;
+  background-color: #F4E8C1;
+  margin: 16px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 16px 6px #00ff8041;
+}
+.articleContainerMain article:hover{
+  transform: scale(1.05);
+  box-shadow: 0px 2px 16px 6px #00ff807f;
+  cursor: pointer;
+  transition: all 0.06s;
+}
+.articleContainerMain img{
+  width: 100%;
+  height: 350px;
+}
+
+.articleContainerMain h2{
+  font-size: 20px;
+  color: #131313;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+/* MAIN PAGE HOME*/
+/* /////////////////////////////////////////////////////////////////////////// */
+
+.sectionMainHomeCurrent{
+  width: 60%;
+  height: 70vh;
+}
+section.sectionMainHomeCurrent{
+  position: relative;
+}
+.sectionMainHomeCurrent>div{
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/images/filmEnCours.jpg");
+  background-position: center;
+  background-size: cover ;
+  -webkit-filter: blur(3px);
+}
+.sectionMainHomeCurrent article{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+}
+.sectionMainHomeCurrent span{
+  background-color: #F4E8C1;
+  padding: 32px 34px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #00ff80;
+  transition: all 0.2s;
+}
+.sectionMainHomeCurrent span:hover{
+  cursor: pointer;
+  color: #020024;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+/* PAGE LOGIN */
+/* /////////////////////////////////////////////////////////////////////////// */
+
+.loginPage header div{
+  width: 20%;
+  height: 14vh;
+  margin: 24px auto;
+  background-image: url("./assets/images/LogoViddeV.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.loginPage article{
+  border: solid 1px #00FF80;
+  margin: 8% 30vw;
+  padding: 0px 0px 64px;
+  text-align: center;
+  background-image: linear-gradient(to left, #064a4e, #005858, #006660, #007466, #08826a);
+  border-radius: 8px;
+  box-shadow: 0px 0px 16px 4px #00FF80;
+}
+.loginPage h1{
+  padding: 32px 0px;
+  color: #F4E8C1;
+}
+.loginPage input{
+  margin: auto;
+  text-align: center;
+  display: block;
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 4px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.loginPage a{
+  display:block;
+  color: #F4E8C1;
+}
+.loginPage form div{
+  margin: 32px 0px 0px ;
 }
